@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    background-image: url("../images/s0.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size:contain;
+}
