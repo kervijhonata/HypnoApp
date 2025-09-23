@@ -1,0 +1,1 @@
+Link de teste: https://kervijhonata.github.io/HypnoApp/
