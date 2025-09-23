@@ -12,3 +12,70 @@ body {
     background-position-y: center;
     background-size:contain;
 }
+
+
+div[data-layerId]{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    &[data-layerId="spiral-container"] {
+        z-index: 1;
+    }
+
+    &[data-layerId="user-controls"] {
+        z-index: 2;
+        display: flex;
+
+        .floating-menu {
+            left: 50px;
+            bottom: 120px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .floating-menu {
+
+
+        floating: none;
+        position: absolute;
+        bottom: 0;
+        left: 22vw;
+        background-color: rgb(56, 56, 57);
+        width: auto;
+        height: 60px;
+        font-size: 1em;
+        border-radius: 25px;
+        z-index: 99;
+
+        button {
+            width: 56px;
+            background-color: transparent;
+            border: 1px solid white;
+            height: 56px;
+            padding: 0;
+            content: " ";
+            border-radius: 60px;
+            color: white;
+            overflow: hidden;
+
+            &:hover {
+                box-shadow: inset 0 6px 10px black;
+                background-color: rgb(50, 51, 50);
+                color: black;
+                cursor: pointer;
+                transition: 0.3s;
+                transition-timing-function: ease-in-out;
+            }
+        }
+        button:first-child {
+            color: yellowgreen;
+        }
+    }
+}

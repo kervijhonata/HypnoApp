@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HypnoApp</title>
     <link rel="stylesheet" href="../css/app-pagestyle.css">
 </head>
 <body>
 
-    <audio id="audio" src="../sounds/base-bg-hypno.wav" preload="auto"></audio>
-
-    <header>
-        <h1>Spirals</h1>
-        <button data-id="button:pickSpiral" data-action="click->spirals#change">Change</button>
-    </header>
-    
-    <div class="prototypeScope">
+    <div data-layerId="spiral-container">
         <img src="" alt="" srcset="" data-target="spiralsImage">
     </div>
+
+    <div data-layerId="audio-player">
+        <audio preload="auto" id="audioPlayer" data-audioTrackId="baseAudio" loop>
+            <source src="../sounds/base-bg-hypno.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="testAudio">
+            <source src="../sounds/sound3.mp3" data-audioTrackId="userAudio" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div data-layerId="user-controls">
+        <div class="floating-menu">
+            <button data-id="button:playAudio" data-action="click->audio#playPause" data-target="audioButton">Play/Pause</button>
+            <button data-id="button:stopAudio" data-action="click->audio#stop">Stop</button>
+            <button data-id="button:volumeUp" data-action="click->audio#volumeUp">Vol +</button>
+            <button data-id="button:volumeDown" data-action="click->audio#volumeDown">Vol -</button>
+            <button data-id="button:react" data-action="click->inser">React</button>
+        </div>
+    </div>
+
 
     <script type="module" src="../js/app_script.js"></script>
 
